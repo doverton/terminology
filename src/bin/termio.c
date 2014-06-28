@@ -4634,6 +4634,9 @@ termio_selection_get(Evas_Object *obj, int c1x, int c1y, int c2x, int c2y,
                   else break;
                }
 #endif
+             ERR("[%d][%d] codepoint:%d|%c w:%d c2y:%d end_x:%d nl:%d tab:%d",
+                 y,x,cells[x].codepoint, cells[x].codepoint,
+                 w, c2y, end_x, cells[x].att.newline, cells[x].att.tab);
              if (x >= w) break;
              if ((cells[x].codepoint == 0) || (cells[x].codepoint == ' '))
                {

@@ -104,6 +104,8 @@ _termio_link_find(Evas_Object *obj, int cx, int cy,
    size_t len;
    Eina_Bool goback = EINA_TRUE, goforward = EINA_FALSE, escaped = EINA_FALSE;
 
+   return NULL;
+
    x1 = x2 = cx;
    y1 = y2 = cy;
    termio_size_get(obj, &w, &h);
