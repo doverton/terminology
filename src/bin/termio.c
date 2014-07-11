@@ -2040,6 +2040,22 @@ _handle_shift(Evas_Event_Key_Down *ev, int by, Evas_Object *term, Termio *sd)
         if (sd->scroll < 0) sd->scroll = 0;
         _smart_update_queue(term, sd);
      }
+   else if (!strcmp(ev->key, "Up"))
+     {
+        if (!(sd->pty->altbuf))
+          {
+            sd->scroll++;
+            if (sd->scroll > sd->pty->backscroll_num)
+              sd->scroll = sd->pty->backscroll_num;
+            _smart_update_queue(term, sd);
+          }
+     }
+   else if (!strcmp(ev->key, "Down"))
+     {
+        sd->scroll--;
+        if (sd->scroll < 0) sd->scroll = 0;
+        _smart_update_queue(term, sd);
+     }
    else if (!strcmp(ev->key, "Insert"))
      {
         if (evas_key_modifier_is_set(ev->modifiers, "Control"))

@@ -32,6 +32,8 @@ options_keys(Evas_Object *opbox, Evas_Object *term EINA_UNUSED)
 
    KB("Scroll one page up", "Shift + PgUp");
    KB("Scroll one page down", "Shift + PgDn");
+   KB("Scroll one line up", "Shift + Up");
+   KB("Scroll one line down", "Shift + Down");
    KB("Paste Clipboard (ctrl+v/c) selection", "Shift + Insert");
    KB("Paste Clipboard (ctrl+v/c) selection", "Ctrl + Shift + v");
    KB("Paste Primary (highlight) selection", "Shift + Ctrl + Insert");
